@@ -1,0 +1,56 @@
+@import '~app/styles/init';
+
+.tag-form {
+  .tag-description {
+    line-height: 1.8em;
+  }
+
+  .submit-btn {
+    margin-right: $gap;
+  }
+}
+
+.tag-search-form {
+  > .input-group {
+    > .form-control {
+      width: 14rem;
+    }
+  }
+}
+
+.tag-list {
+  position: relative;
+
+  .tag-err-msg {
+    margin: 1rem 0;
+  }
+
+  tbody {
+    tr {
+      td {
+        .tag-description {
+          max-width: 13em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -o-text-overflow: ellipsis;
+          -webkit-text-overflow: ellipsis;
+          -moz-text-overflow: ellipsis;
+          white-space:nowrap;
+        }
+
+        .content {
+          line-height: 2;
+
+          p {
+            margin: 0;
+          }
+
+          img {
+            max-width: 4em;
+            margin: 0 1em;
+          }
+        }
+      }
+    }
+  }
+}

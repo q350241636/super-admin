@@ -1,0 +1,81 @@
+@import '~app/styles/init';
+
+.sort-select,
+.comment-search-form {
+  width: auto;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: $gap-xs;
+}
+
+.comment-search-form {
+  .input-group {
+    margin: 0;
+
+    > .form-control {
+      width: 14em;
+    }
+  }
+}
+
+.table-responsive {
+  margin-top: 1rem;
+}
+
+.comment-list {
+  position: relative;
+
+  .comment-err-msg {
+    margin: 1rem 0;
+  }
+
+  tbody {
+    tr {
+      &.comment-item {
+        height: 13rem;
+      }
+
+      td {
+        line-height: 2.6;
+
+        .comment-content {
+          line-height: 2;
+          word-break: break-word;
+        }
+
+        .comment-user {
+          > .avatar,
+          > .name,
+          > .email,
+          > .site {
+            max-width: 200px;
+            @include text-truncate();
+          }
+
+          > .avatar {
+            .image {
+              width: 30px;
+              height: 30px;
+              border-radius: 1px;
+            }
+          }
+        }
+
+        .like-count {
+          color: pink;
+        }
+
+        .action-btn-list {
+          text-align: center;
+
+          .button-wrapper {
+            margin-bottom: $gap-xs;
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
